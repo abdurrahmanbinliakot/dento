@@ -1,0 +1,36 @@
+  <!-- extends from base.html -->
+{% extends 'base.html' %}
+
+{% load static %}
+
+  <!-- Title -->
+{%block site_title%} About Page  {%endblock site_title%}
+
+{% block content %}
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+    {% include 'site_utilities/breadcrumb.html' %}
+
+
+   <!-- ****** About Us Area Start ******* -->
+    {% include 'about/about_us.html' %}
+
+  <div class="container">
+    <div class="dento-border clearfix"></div>
+  </div>
+
+  <!-- Cool Facts Area Start -->
+    {% include 'about/cool_facts.html' %}
+  <!-- Cool Facts Area End -->
+
+  <!-- ***** Testimonials Area Start ***** -->
+  {% include 'about/testimonials_slide.html' %}
+  <!-- ***** Testimonials Area End ***** -->
+
+  <!-- ***** Dento Dentist Area Start ***** -->
+  {% include 'about/staff.html' %}
+  <!-- ***** Dento Dentist Area End ***** -->
+
+  <!-- ***** Footer Area Start ***** -->
+  {% endblock content %}

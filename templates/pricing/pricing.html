@@ -1,0 +1,37 @@
+{% load static %}
+  <!-- ***** Dento Pricing Table Area Start ***** -->
+      <div class="row">
+        <div class="col-12">
+          <div class="dento-price-table table-responsive">
+            <table class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Service Names</th>
+                  <th scope="col">Stage</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for data in pricing_data %}
+                <tr>
+                  <th scope="row">
+                  {{data.service_names}}
+                  
+                 </th>
+                  <td>{{data.stage}}</td>
+                  <td>৳ {{data.price}}.00</td>
+                </tr>
+                {% endfor %}
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="more-btn text-center mt-50">
+            <a href="#" class="btn dento-btn">Read More <i class="fa fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+  <!-- ***** Dento Pricing Table Area End ***** -->

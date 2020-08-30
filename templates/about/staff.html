@@ -1,0 +1,42 @@
+{% load static %}
+<!-- ***** Dento Dentist Area Start ***** -->
+  <section class="dentist-area section-padding-100-0">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h2>Our Dentist</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Single Dentist Area -->
+        {% for staff in staffs %}
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="single-dentist-area mb-100">
+            <img src="{{staff.photo.url}}" alt="">
+            <!-- Dentist Content -->
+            <div class="dentist-content">
+              <!-- Social Info -->
+              <div class="dentist-social-info">
+                <a href="{{staff.facebook_profile}}"><i class="fa fa-facebook"></i></a>
+                <a href="{{staff.twitter_profile}}"><i class="fa fa-twitter"></i></a>
+                <a href="{{staff.google_plus_profile}}"><i class="fa fa-google-plus"></i></a>
+              </div>
+              <!-- Dentist Info -->
+              <div class="dentist-info bg-gradient-overlay">
+                <h5>{{staff.name}}</h5>
+                <p>{{staff.designation}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <!-- Single Dentist Area -->
+      </div>
+    </div>
+  </section>
+  <!-- ***** Dento Dentist Area End ***** -->
