@@ -11,6 +11,8 @@ urlpatterns = [
     path('pricing', include('pricing.urls')),
     path('service', include('service.urls')),
 
+
+
 ]
 
 # this section for media file
