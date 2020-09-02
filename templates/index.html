@@ -194,12 +194,12 @@
         {% for post in post_list %}
         <div class="col-12 col-md-6 col-lg-4">
           <div class="single-blog-item mb-100">
-            <a href="./blog-details.html">
+            <a href="{% url 'post_detail' post.slug  %}">
               <img src="{% static 'img/bg-img/4.jpg' %}" alt="">
             </a>
             <!-- Blog Content -->
             <div class="blog-content">
-              <a href="{% url 'post_detail' post.slug  %}" class="post-title">{{ post.title }}</a>
+              <a href="{{post.slug}}" class="post-title">{{ post.title }}</a>
               <p> {{post.content | safe |slice:":200" }} <p>
               <div class="post-meta">
                 <a href="#"><i class="icon_clock_alt"></i> {{ post.created_on}}</a>

@@ -10,6 +10,7 @@ urlpatterns = [
     path('details', include('details.urls')),
     path('pricing', include('pricing.urls')),
     path('service', include('service.urls')),
+    
 
 
 

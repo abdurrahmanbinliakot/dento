@@ -65,9 +65,13 @@
             <h5 class="title">3 Comments</h5>
 
             <ol>
+
+            
               <!-- Single Comment Area -->
               <li class="single_comment_area">
                 <!-- Comment Content -->
+
+                {% for comment in comments %}
                 <div class="comment-content d-flex">
                   <!-- Comment Author -->
                   <div class="comment-author">
@@ -75,11 +79,13 @@
                   </div>
                   <!-- Comment Meta -->
                   <div class="comment-meta">
-                    <a href="#" class="post-author">Tom Hardy / <span>28 Sep 2018 at 10:00 am</span></a>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sitdown ameto, consectetur, adipisci velit, sed quiata non numqua eius modi tempor incidunt ut labore.</p>
+                    <a href="#" class="post-author">{{ comment.name }} / <span>{{ comment.created_on }}</span></a>
+                    <p>{{ comment.body | linebreaks }}</p>
                     <a href="#" class="comment-reply">Reply</a>
                   </div>
                 </div>
+                {% endfor %}
+
                 <ol class="children">
                   <li class="single_comment_area">
                     <!-- Comment Content -->
@@ -98,6 +104,8 @@
                   </li>
                 </ol>
               </li>
+
+              
 
               <!-- Single Comment Area -->
               <li class="single_comment_area">
